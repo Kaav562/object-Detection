@@ -2,11 +2,6 @@ img = "";
 status = "";
 objects = [];
 
-function preload(){
-    img = loadImage('https://ibb.co/Z6tLh7G');
-}
-
-
 function setup()
 {
     Canvas = createCanvas(380, 380);
