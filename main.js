@@ -14,7 +14,7 @@ function setup()
     video = createCapture(VIDEO);
     video.size(380,380);
     video.hide();
-    objectDetecter = ml5.objectDetector('cocossd', modelLoaded);
+    objectDetector = ml5.objectDetector('cocossd', modelLoaded);
     document.getElementById("status").innerHTML = "Status : Detecting Objects";
 
 }
@@ -47,10 +47,9 @@ function draw()
 function modelLoaded() {
     console.log("Model Loaded!");
     status = true;
-    objectDetecter.detect(video, gotResults);
 }
 
-function gotResults(error, results) {
+function gotResult(error, results) {
     if (error) {
         console.log(error);
     }
